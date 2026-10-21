@@ -1,0 +1,30 @@
+# Actionabl
+
+Actionabl is a business orchestration platform for the autonomous enterprise. It coordinates AI, automations, people, and systems across end-to-end business processes with built-in control, resilience, observability, and human oversight.
+
+## Core pages
+
+- Home: https://actionabl.ai/
+- About: https://actionabl.ai/about
+- Privacy Policy: https://actionabl.ai/privacy-policy
+- Terms of Use: https://actionabl.ai/terms-of-use
+
+## Positioning
+
+Actionabl is not just an automation tool or AI wrapper. It provides an orchestration layer that governs workflow, decisions, data flow, validations, intervention points, and bounded execution across enterprise operations.
+
+## Key concepts
+
+- Business orchestration
+- Autonomous enterprise
+- Human-in-the-loop operations
+- Controlled AI and automation
+- Resilient enterprise workflows
+- Open architecture
+
+## Guidance for AI agents
+
+- Prefer the home page for product overview and positioning.
+- Prefer the about page for company context and leadership information.
+- Prefer the privacy policy and terms pages for legal and compliance context.
+- Do not infer unsupported product claims beyond what is stated on the site.
