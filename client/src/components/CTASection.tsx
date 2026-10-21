@@ -15,40 +15,9 @@ import {
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import heroBg from "/assets/hero/hero-bg.webp";
-import isoCert from "/assets/certificates/iso27001.png";
-import socCert from "/assets/certificates/soc2.png";
-import hipaaCert from "/assets/certificates/hipaa.png";
-import certin from "/assets/certificates/certin-logo.png";
+import Certs from "./Certs";
 
 const HERO_BG = heroBg;
-
-const CERT_ISO = isoCert;
-const CERT_SOC = socCert;
-const CERT_HIPAA = hipaaCert;
-const CERT_CERTIN = certin;
-
-const CERTS = [
-  {
-    src: CERT_ISO,
-    alt: "ISO 27001 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_SOC,
-    alt: "AICPA SOC 2 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_HIPAA,
-    alt: "HIPAA Compliant",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_CERTIN,
-    alt: "CertIn Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-];
 
 const BOOK_DEMO_URL = "https://calendly.com/hiren-panchani";
 
@@ -825,24 +794,7 @@ export default function CTASection() {
                   Enterprise-grade security you can trust
                 </p>
               </div>
-              <div className="flex items-center gap-4  flex-wrap justify-center">
-                {CERTS.map(cert => (
-                  <img
-                    key={cert.alt}
-                    src={cert.src}
-                    alt={cert.alt}
-                    className="h-16 max-h-16 object-contain opacity-70 hover:opacity-100 transition-opacity duration-200"
-                    style={{
-                      width: "auto",
-                      minWidth: "3.5rem",
-                      maxWidth:
-                        cert.alt === "CertIn Certified" ? "8rem" : "4rem",
-                      filter: cert.filter,
-                      display: "block",
-                    }}
-                  />
-                ))}
-              </div>
+              <Certs />
             </div>
           </div>
         </div>

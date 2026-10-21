@@ -7,31 +7,7 @@ import { useMetaTags } from "@/hooks/useMetaTags";
 import { Link, useLocation } from "wouter";
 import { Linkedin, Twitter, Youtube } from "lucide-react";
 import { BASE_URL } from "@/const";
-import isoCert from "/assets/certificates/iso27001.png";
-import socCert from "/assets/certificates/soc2.png";
-import hipaaCert from "/assets/certificates/hipaa.png";
-
-const CERT_ISO = isoCert;
-const CERT_SOC = socCert;
-const CERT_HIPAA = hipaaCert;
-
-const CERTS = [
-  {
-    src: CERT_ISO,
-    alt: "ISO 27001 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_SOC,
-    alt: "AICPA SOC 2 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_HIPAA,
-    alt: "HIPAA Compliant",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-];
+import Certs from "@/components/Certs";
 
 export default function Eula() {
   const [location] = useLocation();
@@ -422,19 +398,19 @@ export default function Eula() {
             agree to be bound by its terms and conditions.
           </p>
         </div>
-<br />
-       <div>
-  <a
-    href="/USERLICENSE_v1/USERLICENSE_v1.pdf"
-    download
-    className="flex items-center gap-1"
-  >
-    <b>Download –</b>
-    <span className="text-sm font-medium text-blue-600 hover:text-blue-800 underline cursor-pointer">
-      End User License Agreement (EULA)
-    </span>
-  </a>
-</div>
+        <br />
+        <div>
+          <a
+            href="/USERLICENSE_v1/USERLICENSE_v1.pdf"
+            download
+            className="flex items-center gap-1"
+          >
+            <b>Download –</b>
+            <span className="text-sm font-medium text-blue-600 hover:text-blue-800 underline cursor-pointer">
+              End User License Agreement (EULA)
+            </span>
+          </a>
+        </div>
 
         {/* Footer nav */}
         <div
@@ -459,7 +435,7 @@ export default function Eula() {
               fontFamily: "'DM Sans', sans-serif",
             }}
           >
-           Terms of Use →
+            Terms of Use →
           </Link>
         </div>
       </main>
@@ -567,17 +543,7 @@ export default function Eula() {
                   Enterprise-grade security you can trust
                 </p>
               </div>
-              <div className="flex items-center gap-8 flex-wrap justify-center">
-                {CERTS.map(cert => (
-                  <img
-                    key={cert.alt}
-                    src={cert.src}
-                    alt={cert.alt}
-                    className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-200"
-                    style={{ filter: cert.filter }}
-                  />
-                ))}
-              </div>
+              <Certs />
             </div>
           </div>
         </div>

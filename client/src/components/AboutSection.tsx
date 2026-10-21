@@ -19,7 +19,11 @@ const teamMembers = [
     bio: "IIT Bombay alumnus with 35+ years of IT experience as a Technology & Innovation Lead. Delivered large-scale enterprise solutions across North America, Europe, and Asia.",
     img: chimanImg,
     linkedin: "https://www.linkedin.com/company/actionabl",
-    tags: ["Technology Innovation", "Enterprise Architecture", "Global Delivery"],
+    tags: [
+      "Technology Innovation",
+      "Enterprise Architecture",
+      "Global Delivery",
+    ],
   },
   {
     name: "Chetan Panchani",
@@ -146,7 +150,10 @@ export default function AboutSection() {
               >
                 About Actionabl
               </span>
-              <div className="h-px flex-1 max-w-12" style={{ background: "rgba(79,99,215,0.18)" }} />
+              <div
+                className="h-px flex-1 max-w-12"
+                style={{ background: "rgba(79,99,215,0.18)" }}
+              />
             </motion.div>
 
             <motion.h2
@@ -164,9 +171,15 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.18 }}
               className="text-[1.05rem] leading-relaxed mb-4"
-              style={{ color: "oklch(0.45 0.015 260)", fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                color: "oklch(0.45 0.015 260)",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
             >
-              Actionabl was founded on a simple observation: enterprises have invested heavily in automation tools, AI platforms, and point solutions — yet their operations remain fragmented, reactive, and difficult to govern.
+              Actionabl was founded on a simple observation: enterprises have
+              invested heavily in automation tools, AI platforms, and point
+              solutions — yet their operations remain fragmented, reactive, and
+              difficult to govern.
             </motion.p>
 
             <motion.p
@@ -174,9 +187,14 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.26 }}
               className="text-[1.05rem] leading-relaxed mb-4"
-              style={{ color: "oklch(0.45 0.015 260)", fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                color: "oklch(0.45 0.015 260)",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
             >
-              The missing layer isn't more AI. It's orchestration — a structured control plane that coordinates people, systems, automations, and AI agents within a single, auditable process framework.
+              The missing layer isn't more AI. It's orchestration — a structured
+              control plane that coordinates people, systems, automations, and
+              AI agents within a single, auditable process framework.
             </motion.p>
 
             <motion.p
@@ -184,9 +202,13 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.34 }}
               className="text-[1.05rem] leading-relaxed"
-              style={{ color: "oklch(0.45 0.015 260)", fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                color: "oklch(0.45 0.015 260)",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
             >
-              We built Actionabl to be that layer — the operating system for the autonomous enterprise.
+              We built Actionabl to be that layer — the operating system for the
+              autonomous enterprise.
             </motion.p>
           </div>
 
@@ -199,9 +221,11 @@ export default function AboutSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="rounded-2xl p-7"
               style={{
-                background: "linear-gradient(145deg, rgba(248,249,255,1) 0%, rgba(239,243,255,0.98) 58%, rgba(231,237,255,0.94) 100%)",
+                background:
+                  "linear-gradient(145deg, rgba(248,249,255,1) 0%, rgba(239,243,255,0.98) 58%, rgba(231,237,255,0.94) 100%)",
                 border: "1px solid rgba(79, 99, 215, 0.12)",
-                boxShadow: "0 10px 28px rgba(79, 99, 215, 0.08), 0 2px 8px rgba(27, 32, 40, 0.04)",
+                boxShadow:
+                  "0 10px 28px rgba(79, 99, 215, 0.08), 0 2px 8px rgba(27, 32, 40, 0.04)",
               }}
             >
               <div
@@ -217,7 +241,9 @@ export default function AboutSection() {
                 className="text-[1.15rem] font-semibold leading-snug"
                 style={{ fontFamily: "'Syne', sans-serif", color: "#1b2028" }}
               >
-                "To give enterprises the control layer they need to operate with the speed, intelligence, and reliability that modern business demands."
+                "To give enterprises the control layer they need to operate with
+                the speed, intelligence, and reliability that modern business
+                demands."
               </p>
             </motion.div>
 
@@ -230,21 +256,25 @@ export default function AboutSection() {
             >
               {[
                 { value: "2022", label: "Founded" },
-                { value: "50+", label: "Enterprise Customers" },
-                { value: "12+", label: "Industries Served" },
+                { value: "10+", label: "Enterprise Customers" },
+                { value: "3+", label: "Industries Served" },
                 { value: "99.9%", label: "Process Reliability" },
-              ].map((stat) => (
+              ].map(stat => (
                 <div
                   key={stat.label}
                   className="rounded-xl p-5"
                   style={{
-                    background: "linear-gradient(180deg, rgba(247,249,255,0.92) 0%, rgba(255,255,255,1) 100%)",
+                    background:
+                      "linear-gradient(180deg, rgba(247,249,255,0.92) 0%, rgba(255,255,255,1) 100%)",
                     border: "1px solid rgba(79, 99, 215, 0.12)",
                   }}
                 >
                   <div
                     className="text-[1.8rem] font-bold mb-1"
-                    style={{ color: "oklch(0.18 0.03 260)", fontFamily: "'Syne', sans-serif" }}
+                    style={{
+                      color: "oklch(0.18 0.03 260)",
+                      fontFamily: "'Syne', sans-serif",
+                    }}
                   >
                     {stat.value}
                   </div>
@@ -271,10 +301,7 @@ export default function AboutSection() {
       />
 
       {/* Part 2: Core Values */}
-      <div
-        ref={valuesRef}
-        className="container relative py-20 lg:py-28"
-      >
+      <div ref={valuesRef} className="container relative py-20 lg:py-28">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={valuesInView ? { opacity: 1, y: 0 } : {}}
@@ -295,7 +322,10 @@ export default function AboutSection() {
           >
             What We Believe
           </span>
-          <div className="h-px flex-1 max-w-12" style={{ background: "rgba(79,99,215,0.18)" }} />
+          <div
+            className="h-px flex-1 max-w-12"
+            style={{ background: "rgba(79,99,215,0.18)" }}
+          />
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-6">
@@ -307,18 +337,24 @@ export default function AboutSection() {
               transition={{ duration: 0.55, delay: i * 0.12 }}
               className="rounded-2xl p-7 group transition-all duration-300"
               style={{
-                background: "linear-gradient(180deg, rgba(247,249,255,0.92) 0%, rgba(255,255,255,1) 100%)",
+                background:
+                  "linear-gradient(180deg, rgba(247,249,255,0.92) 0%, rgba(255,255,255,1) 100%)",
                 border: "1px solid rgba(79, 99, 215, 0.12)",
                 boxShadow: "0 1px 4px rgba(79, 99, 215, 0.05)",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(79, 99, 215, 0.22)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(79, 99, 215, 0.10)";
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor =
+                  "rgba(79, 99, 215, 0.22)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  "0 4px 20px rgba(79, 99, 215, 0.10)";
+                (e.currentTarget as HTMLDivElement).style.transform =
+                  "translateY(-2px)";
               }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(79, 99, 215, 0.12)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 1px 4px rgba(79, 99, 215, 0.05)";
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor =
+                  "rgba(79, 99, 215, 0.12)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  "0 1px 4px rgba(79, 99, 215, 0.05)";
                 (e.currentTarget as HTMLDivElement).style.transform = "none";
               }}
             >
@@ -381,7 +417,10 @@ export default function AboutSection() {
               >
                 Leadership
               </span>
-              <div className="h-px flex-1 max-w-12" style={{ background: "rgba(79,99,215,0.18)" }} />
+              <div
+                className="h-px flex-1 max-w-12"
+                style={{ background: "rgba(79,99,215,0.18)" }}
+              />
             </motion.div>
 
             <motion.h2
@@ -400,9 +439,16 @@ export default function AboutSection() {
             animate={teamInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.18 }}
             className="text-[1rem] leading-relaxed lg:pt-14"
-            style={{ color: "oklch(0.45 0.015 260)", fontFamily: "'DM Sans', sans-serif" }}
+            style={{
+              color: "oklch(0.45 0.015 260)",
+              fontFamily: "'DM Sans', sans-serif",
+            }}
           >
-            Our team, based in the USA and India, combines deep expertise in Automation, Digital Transformation, Customer Success, and Business Growth — with a strong track record of innovation, scaling, and delivering solutions that have transformed operations for various organizations.
+            Our team, based in the USA and India, combines deep expertise in
+            Automation, Digital Transformation, Customer Success, and Business
+            Growth — with a strong track record of innovation, scaling, and
+            delivering solutions that have transformed operations for various
+            organizations.
           </motion.p>
         </div>
 
@@ -420,14 +466,19 @@ export default function AboutSection() {
                 border: "1px solid oklch(0.91 0.008 260)",
                 boxShadow: "0 1px 4px oklch(0.18 0.03 260 / 0.04)",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(21, 159, 149, 0.10), 0 2px 8px oklch(0.18 0.03 260 / 0.06)";
-                (e.currentTarget as HTMLDivElement).style.borderColor = "oklch(0.80 0.08 175 / 0.5)";
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)";
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  "0 8px 32px rgba(21, 159, 149, 0.10), 0 2px 8px oklch(0.18 0.03 260 / 0.06)";
+                (e.currentTarget as HTMLDivElement).style.borderColor =
+                  "oklch(0.80 0.08 175 / 0.5)";
+                (e.currentTarget as HTMLDivElement).style.transform =
+                  "translateY(-3px)";
               }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 1px 4px oklch(0.18 0.03 260 / 0.04)";
-                (e.currentTarget as HTMLDivElement).style.borderColor = "oklch(0.91 0.008 260)";
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  "0 1px 4px oklch(0.18 0.03 260 / 0.04)";
+                (e.currentTarget as HTMLDivElement).style.borderColor =
+                  "oklch(0.91 0.008 260)";
                 (e.currentTarget as HTMLDivElement).style.transform = "none";
               }}
             >
@@ -452,7 +503,8 @@ export default function AboutSection() {
                 <div
                   className="absolute inset-0"
                   style={{
-                    background: "linear-gradient(to top, oklch(0.96 0.02 264 / 0.4) 0%, transparent 50%)",
+                    background:
+                      "linear-gradient(to top, oklch(0.96 0.02 264 / 0.4) 0%, transparent 50%)",
                     pointerEvents: "none",
                   }}
                 />
@@ -487,15 +539,21 @@ export default function AboutSection() {
                       background: "oklch(0.96 0.005 90)",
                       border: "1px solid oklch(0.91 0.008 260)",
                     }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#159f95";
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.75 0.10 175 / 0.5)";
-                      (e.currentTarget as HTMLAnchorElement).style.background = "oklch(0.94 0.04 175 / 0.5)";
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.color =
+                        "#159f95";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor =
+                        "oklch(0.75 0.10 175 / 0.5)";
+                      (e.currentTarget as HTMLAnchorElement).style.background =
+                        "oklch(0.94 0.04 175 / 0.5)";
                     }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.55 0.015 260)";
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.91 0.008 260)";
-                      (e.currentTarget as HTMLAnchorElement).style.background = "oklch(0.96 0.005 90)";
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.color =
+                        "oklch(0.55 0.015 260)";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor =
+                        "oklch(0.91 0.008 260)";
+                      (e.currentTarget as HTMLAnchorElement).style.background =
+                        "oklch(0.96 0.005 90)";
                     }}
                     aria-label={`${member.name} on LinkedIn`}
                   >
@@ -515,7 +573,7 @@ export default function AboutSection() {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
-                  {member.tags.map((tag) => (
+                  {member.tags.map(tag => (
                     <span
                       key={tag}
                       className="text-[10px] px-2 py-0.5 rounded-md"

@@ -7,35 +7,7 @@ import { Link, useLocation } from "wouter";
 import { Linkedin, Twitter, Youtube } from "lucide-react";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { BASE_URL } from "@/const";
-
-import isoCert from "/assets/certificates/iso27001.png";
-import socCert from "/assets/certificates/soc2.png";
-import hipaaCert from "/assets/certificates/hipaa.png";
-import heroBg from "/assets/hero/hero-bg.webp";
-
-const HERO_BG = heroBg;
-
-const CERT_ISO = isoCert;
-const CERT_SOC = socCert;
-const CERT_HIPAA = hipaaCert;
-
-const CERTS = [
-  {
-    src: CERT_ISO,
-    alt: "ISO 27001 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_SOC,
-    alt: "AICPA SOC 2 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_HIPAA,
-    alt: "HIPAA Compliant",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-];
+import Certs from "@/components/Certs";
 
 export default function TermsOfUse() {
   const [location] = useLocation();
@@ -68,10 +40,16 @@ export default function TermsOfUse() {
         {/* Breadcrumb */}
         <nav
           className="flex items-center gap-2 mb-10 text-[0.82rem]"
-          style={{ color: "oklch(0.55 0.015 260)", fontFamily: "'DM Sans', sans-serif" }}
+          style={{
+            color: "oklch(0.55 0.015 260)",
+            fontFamily: "'DM Sans', sans-serif",
+          }}
         >
           <Link href="/">
-            <span className="hover:underline cursor-pointer" style={{ color: "oklch(0.52 0.22 264)" }}>
+            <span
+              className="hover:underline cursor-pointer"
+              style={{ color: "oklch(0.52 0.22 264)" }}
+            >
               Home
             </span>
           </Link>
@@ -80,9 +58,15 @@ export default function TermsOfUse() {
         </nav>
 
         {/* Header */}
-        <div className="mb-12 pb-8" style={{ borderBottom: "1px solid oklch(0.88 0.005 260)" }}>
+        <div
+          className="mb-12 pb-8"
+          style={{ borderBottom: "1px solid oklch(0.88 0.005 260)" }}
+        >
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-[3px] h-5 rounded-full" style={{ background: "#4f63d7" }} />
+            <div
+              className="w-[3px] h-5 rounded-full"
+              style={{ background: "#4f63d7" }}
+            />
             <div
               className="text-[10px] tracking-[0.14em] uppercase"
               style={{
@@ -92,7 +76,10 @@ export default function TermsOfUse() {
             >
               Legal
             </div>
-            <div className="h-px w-12" style={{ background: "rgba(79,99,215,0.18)" }} />
+            <div
+              className="h-px w-12"
+              style={{ background: "rgba(79,99,215,0.18)" }}
+            />
           </div>
           <h1
             className="text-[2.8rem] lg:text-[3.4rem] font-bold leading-[1.1] tracking-tight"
@@ -105,7 +92,10 @@ export default function TermsOfUse() {
           </h1>
           <p
             className="mt-4 text-[0.9rem]"
-            style={{ color: "oklch(0.55 0.015 260)", fontFamily: "'JetBrains Mono', monospace" }}
+            style={{
+              color: "oklch(0.55 0.015 260)",
+              fontFamily: "'JetBrains Mono', monospace",
+            }}
           >
             Last updated: January 1, 2026
           </p>
@@ -114,22 +104,28 @@ export default function TermsOfUse() {
         {/* Content */}
         <div
           className="max-w-3xl space-y-8 text-[1rem] leading-relaxed"
-          style={{ color: "oklch(0.32 0.015 260)", fontFamily: "'DM Sans', sans-serif" }}
+          style={{
+            color: "oklch(0.32 0.015 260)",
+            fontFamily: "'DM Sans', sans-serif",
+          }}
         >
           <p>
-            Welcome to Actionabl's website. By accessing and using this site, you fully agree to comply
-            with the terms and conditions outlined below. If you do not accept any part of these terms,
-            you must not continue to use this website.
+            Welcome to Actionabl's website. By accessing and using this site,
+            you fully agree to comply with the terms and conditions outlined
+            below. If you do not accept any part of these terms, you must not
+            continue to use this website.
           </p>
 
           <p>
-            To use this website, you must be at least 18 years old. By using the site, you confirm that
-            you meet this age requirement and agree to be bound by these terms.
+            To use this website, you must be at least 18 years old. By using the
+            site, you confirm that you meet this age requirement and agree to be
+            bound by these terms.
           </p>
 
           <p>
-            In addition, this website uses cookies to improve and personalize your browsing experience.
-            By continuing to use the site, you consent to the use of cookies in line with Actionabl's{" "}
+            In addition, this website uses cookies to improve and personalize
+            your browsing experience. By continuing to use the site, you consent
+            to the use of cookies in line with Actionabl's{" "}
             <Link href="/privacy-policy">
               <span
                 className="underline cursor-pointer"
@@ -138,21 +134,25 @@ export default function TermsOfUse() {
                 Privacy Policy
               </span>
             </Link>
-            , which can be reviewed here. These cookies help us improve functionality and tailor content
-            to suit your preferences.
+            , which can be reviewed here. These cookies help us improve
+            functionality and tailor content to suit your preferences.
           </p>
 
           <div>
             <h2
               className="text-[1.4rem] font-bold mb-3"
-              style={{ color: "oklch(0.13 0.025 260)", fontFamily: "'Syne', sans-serif" }}
+              style={{
+                color: "oklch(0.13 0.025 260)",
+                fontFamily: "'Syne', sans-serif",
+              }}
             >
               Intellectual Property
             </h2>
             <p>
-              All content on this website, including but not limited to text, graphics, logos, icons,
-              images, and software, is the property of Actionabl and is protected by applicable
-              intellectual property laws. Unauthorized use or reproduction of any content is strictly
+              All content on this website, including but not limited to text,
+              graphics, logos, icons, images, and software, is the property of
+              Actionabl and is protected by applicable intellectual property
+              laws. Unauthorized use or reproduction of any content is strictly
               prohibited.
             </p>
           </div>
@@ -160,70 +160,91 @@ export default function TermsOfUse() {
           <div>
             <h2
               className="text-[1.4rem] font-bold mb-3"
-              style={{ color: "oklch(0.13 0.025 260)", fontFamily: "'Syne', sans-serif" }}
+              style={{
+                color: "oklch(0.13 0.025 260)",
+                fontFamily: "'Syne', sans-serif",
+              }}
             >
               Limitation of Liability
             </h2>
             <p>
-              Actionabl shall not be liable for any direct, indirect, incidental, special, or
-              consequential damages resulting from the use or inability to use this website or its
-              content. We make no warranties, expressed or implied, regarding the accuracy, completeness,
-              or reliability of any information on this site.
+              Actionabl shall not be liable for any direct, indirect,
+              incidental, special, or consequential damages resulting from the
+              use or inability to use this website or its content. We make no
+              warranties, expressed or implied, regarding the accuracy,
+              completeness, or reliability of any information on this site.
             </p>
           </div>
 
           <div>
             <h2
               className="text-[1.4rem] font-bold mb-3"
-              style={{ color: "oklch(0.13 0.025 260)", fontFamily: "'Syne', sans-serif" }}
+              style={{
+                color: "oklch(0.13 0.025 260)",
+                fontFamily: "'Syne', sans-serif",
+              }}
             >
               Third-Party Links
             </h2>
             <p>
-              This website may contain links to third-party websites. These links are provided for your
-              convenience only. Actionabl has no control over the content of those sites and accepts no
-              responsibility for them or for any loss or damage that may arise from your use of them.
+              This website may contain links to third-party websites. These
+              links are provided for your convenience only. Actionabl has no
+              control over the content of those sites and accepts no
+              responsibility for them or for any loss or damage that may arise
+              from your use of them.
             </p>
           </div>
 
           <div>
             <h2
               className="text-[1.4rem] font-bold mb-3"
-              style={{ color: "oklch(0.13 0.025 260)", fontFamily: "'Syne', sans-serif" }}
+              style={{
+                color: "oklch(0.13 0.025 260)",
+                fontFamily: "'Syne', sans-serif",
+              }}
             >
               Changes to These Terms
             </h2>
             <p>
-              Actionabl reserves the right to modify these terms at any time without prior notice. Your
-              continued use of the website following any changes constitutes your acceptance of the
-              revised terms. We encourage you to review this page periodically to stay informed of any
-              updates.
+              Actionabl reserves the right to modify these terms at any time
+              without prior notice. Your continued use of the website following
+              any changes constitutes your acceptance of the revised terms. We
+              encourage you to review this page periodically to stay informed of
+              any updates.
             </p>
           </div>
 
           <div>
             <h2
               className="text-[1.4rem] font-bold mb-3"
-              style={{ color: "oklch(0.13 0.025 260)", fontFamily: "'Syne', sans-serif" }}
+              style={{
+                color: "oklch(0.13 0.025 260)",
+                fontFamily: "'Syne', sans-serif",
+              }}
             >
               Governing Law
             </h2>
             <p>
-              These terms and conditions are governed by and construed in accordance with applicable
-              laws. Any disputes arising from the use of this website shall be subject to the exclusive
-              jurisdiction of the competent courts.
+              These terms and conditions are governed by and construed in
+              accordance with applicable laws. Any disputes arising from the use
+              of this website shall be subject to the exclusive jurisdiction of
+              the competent courts.
             </p>
           </div>
 
           <div>
             <h2
               className="text-[1.4rem] font-bold mb-3"
-              style={{ color: "oklch(0.13 0.025 260)", fontFamily: "'Syne', sans-serif" }}
+              style={{
+                color: "oklch(0.13 0.025 260)",
+                fontFamily: "'Syne', sans-serif",
+              }}
             >
               Contact
             </h2>
             <p>
-              If you have any questions about these Terms of Use, please contact us at{" "}
+              If you have any questions about these Terms of Use, please contact
+              us at{" "}
               <a
                 href="mailto:info@actionabl.ai"
                 style={{ color: "oklch(0.52 0.22 264)" }}
@@ -244,7 +265,10 @@ export default function TermsOfUse() {
           <Link href="/">
             <span
               className="text-[0.88rem] cursor-pointer hover:underline"
-              style={{ color: "oklch(0.52 0.22 264)", fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                color: "oklch(0.52 0.22 264)",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
             >
               ← Back to Home
             </span>
@@ -252,7 +276,10 @@ export default function TermsOfUse() {
           <Link href="/privacy-policy">
             <span
               className="text-[0.88rem] cursor-pointer hover:underline"
-              style={{ color: "oklch(0.52 0.22 264)", fontFamily: "'DM Sans', sans-serif" }}
+              style={{
+                color: "oklch(0.52 0.22 264)",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
             >
               Privacy Policy →
             </span>
@@ -362,17 +389,7 @@ export default function TermsOfUse() {
                   Enterprise-grade security you can trust
                 </p>
               </div>
-              <div className="flex items-center gap-8 flex-wrap justify-center">
-                {CERTS.map(cert => (
-                  <img
-                    key={cert.alt}
-                    src={cert.src}
-                    alt={cert.alt}
-                    className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-200"
-                    style={{ filter: cert.filter }}
-                  />
-                ))}
-              </div>
+              <Certs />
             </div>
           </div>
         </div>
@@ -484,7 +501,8 @@ export default function TermsOfUse() {
                           (e.currentTarget.style.color = "oklch(0.18 0.03 260)")
                         }
                         onMouseLeave={e =>
-                          (e.currentTarget.style.color = "oklch(0.55 0.015 260)")
+                          (e.currentTarget.style.color =
+                            "oklch(0.55 0.015 260)")
                         }
                       >
                         {link.label}

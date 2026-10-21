@@ -8,34 +8,7 @@ import { motion } from "framer-motion";
 import { Linkedin, Twitter, Youtube } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { BASE_URL } from "@/const";
-import isoCert from "/assets/certificates/iso27001.png";
-import socCert from "/assets/certificates/soc2.png";
-import hipaaCert from "/assets/certificates/hipaa.png";
-import heroBg from "/assets/hero/hero-bg.webp";
-
-const HERO_BG = heroBg;
-
-const CERT_ISO = isoCert;
-const CERT_SOC = socCert;
-const CERT_HIPAA = hipaaCert;
-
-const CERTS = [
-  {
-    src: CERT_ISO,
-    alt: "ISO 27001 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_SOC,
-    alt: "AICPA SOC 2 Certified",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-  {
-    src: CERT_HIPAA,
-    alt: "HIPAA Compliant",
-    filter: "grayscale(1) brightness(0.18) contrast(1.15)",
-  },
-];
+import Certs from "@/components/Certs";
 
 export default function About() {
   const [location] = useLocation();
@@ -70,11 +43,15 @@ export default function About() {
       <div
         className="relative pt-32 pb-16 overflow-hidden"
         style={{
-          background: "linear-gradient(180deg, rgba(244,247,255,0.86) 0%, rgba(255,255,255,1) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(244,247,255,0.86) 0%, rgba(255,255,255,1) 100%)",
         }}
       >
         {/* Diagonal line texture */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.08 }}>
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          style={{ opacity: 0.08 }}
+        >
           <defs>
             <pattern
               id="about-hero-diag"
@@ -283,17 +260,7 @@ export default function About() {
                   Enterprise-grade security you can trust
                 </p>
               </div>
-              <div className="flex items-center gap-8 flex-wrap justify-center">
-                {CERTS.map(cert => (
-                  <img
-                    key={cert.alt}
-                    src={cert.src}
-                    alt={cert.alt}
-                    className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-200"
-                    style={{ filter: cert.filter }}
-                  />
-                ))}
-              </div>
+              <Certs />
             </div>
           </div>
         </div>
@@ -530,14 +497,20 @@ export default function About() {
               >
                 Privacy Policy
               </Link>
-               <span style={{ color: "oklch(0.80 0.005 260)" }}>|</span>
-               <Link href="/eula"
-                              className="text-xs transition-colors duration-200 text-[oklch(0.65_0.015_260)]"
-                              style={{ fontFamily: "'DM Sans', sans-serif" }}
-                              onMouseEnter={(e) => (e.currentTarget.style.color = "oklch(0.35 0.025 260)")}
-                              onMouseLeave={(e) => (e.currentTarget.style.color = "oklch(0.65 0.015 260)")}>
-                              EULA
-                            </Link>
+              <span style={{ color: "oklch(0.80 0.005 260)" }}>|</span>
+              <Link
+                href="/eula"
+                className="text-xs transition-colors duration-200 text-[oklch(0.65_0.015_260)]"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                onMouseEnter={e =>
+                  (e.currentTarget.style.color = "oklch(0.35 0.025 260)")
+                }
+                onMouseLeave={e =>
+                  (e.currentTarget.style.color = "oklch(0.65 0.015 260)")
+                }
+              >
+                EULA
+              </Link>
             </div>
           </div>
         </div>
